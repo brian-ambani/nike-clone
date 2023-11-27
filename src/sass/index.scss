@@ -1,0 +1,106 @@
+@import "config";
+@import "utilities";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: $font-family;
+  line-height: 1.6;
+}
+
+// Navbar
+nav {
+  background-color: $light-color;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin-left: 1rem;
+    }
+    a {
+      font-weight: bold;
+      color: $text-color;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+      color: $dark-color;
+      text-decoration: underline;
+    }
+  }
+
+  .menu-left {
+    display: flex;
+    align-items: center;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      margin-right: 1rem;
+      border-radius: 3rem;
+      background-color: $primary-color;
+      padding: 0.5rem;
+
+      input {
+        border: none;
+        margin-left: 0.5rem;
+        outline: none;
+      }
+      &:hover {
+        color: $dark-color;
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .favourites {
+      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      color: $text-color;
+      font-size: 1.8rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $dark-color;
+        background-color: darken($primary-color, 10%);
+      }
+    }
+
+    .cart {
+      margin-right: 1rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 100%;
+      color: $text-color;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $dark-color;
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
